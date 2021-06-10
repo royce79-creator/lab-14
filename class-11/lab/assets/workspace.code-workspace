@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../../../../bus-mall-lab/bus-mall"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "bus-mall",
+		"liveServer.settings.port": 5503
+	}
+}

@@ -1,0 +1,18 @@
+* {
+  background-color: bisque;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+ul {
+  margin: 25px;
+  list-style-type: disc;
+}
+
+ol {
+  padding: 25px;
+  list-style-position: inside;
+  list-style: decimal;
+}
