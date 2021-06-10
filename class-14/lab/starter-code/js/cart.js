@@ -39,7 +39,6 @@ function showCart() {
   // TODO: Add the TR to the TBODY and each of the TD's to the TR
   itemQuantity.appendChild(itemPicked);
   cart.appendChild(itemQuantity);
-
 }
 
 function removeItemFromCart(event) {

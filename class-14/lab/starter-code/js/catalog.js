@@ -4,7 +4,7 @@
 
 // Set up an empty cart for use on this page.
 const cart = new Cart([]);
-
+let totalCartCount = 0; 
 // On screen load, we call this method to put all of the busmall options
 // (the things in the Product.allProducts array) into the drop down list.
 function populateForm() {
@@ -48,9 +48,11 @@ function addSelectedItemToCart() {
 }
 
 // TODO: Update the cart count in the header nav with the number of items in the Cart
-function updateCounter() {
+function updateCounter(itemQuantity) {
+  totalCartCount += itemQuantity;
+  console.log(typeof(totalCartCount));
+  JSON.stringify(itemQuantity);
   document.getElementById('itemCount').textContent = `:  ${cart.items.length} item(s)`;
-
 }
 
 // TODO: As you add items into the cart, show them (item & quantity) in the cart preview div
@@ -58,11 +60,10 @@ function updateCartPreview() {
   // TODO: Get the item and quantity from the form
   let itemPicked = document.getElementById('items').value;
   console.log(itemPicked);
- 
   let itemQuantity = document.getElementById('quantity').value;
   console.log(itemQuantity);
-
   cart.addItem(itemPicked, itemQuantity);
+  updateCounter(itemQuantity);
 }
 
 // Set up the "submit" event listener on the form.
